@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{order}" th:object="${order}">
+  <label for="number">Enter number</label>
+  <input type="text" id="number" th:field="*{number}">
+    <label for="totalPrice">Enter total Price</label>
+    <input type="text" id="totalPrice" th:field="*{totalPrice}">
+    <label for="address">Enter work address</label>
+    <input type="text" id="address" th:field="*{address}">
+    <label for="status">Enter status</label>
+    <input type="text" id="status" th:field="*{status}">
+  <input type="submit" value="Create">
+</form>
+</body>
+</html>

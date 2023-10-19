@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/{id}/order(id = ${order.getId()})}" th:object="${order}">
+  <label for="number">Enter number</label>
+  <input type="text" id="number" th:field="*{number}">
+    <label for="totalPrice">Enter total Price</label>
+    <input type="text" id="totalPrice" th:field="*{totalPrice}">
+    <label for="status">Enter status</label>
+    <input type="text" id="status" th:field="*{status}">
+    <label for="address">Enter address</label>
+    <input type="text" id="address" th:field="*{address}">
+  <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

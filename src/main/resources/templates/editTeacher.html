@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/{id}/teacher(id = ${teacher.getId()})}" th:object="${teacher}">
+  <label for="fio">Enter name</label>
+  <input type="text" id="fio" th:field="*{fio}">
+    <label for="age">Enter age</label>
+    <input type="text" id="age" th:field="*{age}">
+    <label for="workExperience">Enter workExperience</label>
+    <input type="text" id="workExperience" th:field="*{workExperience}">
+    <label for="type">Enter type</label>
+    <input type="text" id="type" th:field="*{type}">
+  <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

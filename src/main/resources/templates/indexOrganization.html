@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <meta charset="UTF-8">
+    <title>Все организации</title>
+</head>
+<body>
+  <div th:each="teach: ${organization}">
+    <a th:href="@{/{id}/organization(id = ${teach.getId()})}" th:text="${teach.getName()}"></a>
+
+  </div>
+
+<a href="/newOrganization">create new organization</a>
+  <script th:src="@{/js/bootstrap.js}"></script>
+</body>
+</html>

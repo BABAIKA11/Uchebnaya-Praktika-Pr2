@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/}" th:object="${person}">
+  <label for="name">Enter name</label>
+  <input type="text" id="name" th:field="*{name}">
+    <label for="age">Enter age</label>
+    <input type="text" id="age" th:field="*{age}">
+    <label for="surname">Enter surname</label>
+    <input type="text" id="surname" th:field="*{surname}">
+    <label for="midname">Enter midname</label>
+    <input type="text" id="midname" th:field="*{midname}">
+  <input type="submit" value="Create">
+</form>
+</body>
+</html>
